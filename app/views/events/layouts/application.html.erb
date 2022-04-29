@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Eventz</title>
+        <%= csrf_meta_tags%>
+        <%= csp_meta_tag%>
+
+        <%= stylesheet_link_tag 'application', media: 'all',
+        'data-turbolinks-tack': 'reload' %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+      
+      <header>
+        <nav>
+           <%= image_tag("logo") %>
+           <ul>
+            <li>
+              <%= link_to("All Events", "/events") %>
+            </li>
+           </ul>
+        </nav>
+      </header>
+
+    <div class="content">
+        <%= yield %>
+    </div>
+  
+    <footer>
+    <p>
+        Made in Eventz
+    </p>
+    </footer>
+    
+    </body>
+</html>
